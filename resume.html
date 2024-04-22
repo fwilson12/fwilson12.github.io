@@ -2,10 +2,89 @@
 
 <html>
     <head>
+        <link href = "style.css" rel = "stylesheet" type= "text/css">
         <title>The Resume</title>
+        <style>
+            .navbar {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;  
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: red;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+
+
+        </style>
     </head>
 
     <body>
+        <div class="navbar">
+            <div class="dropdown">
+              <button class="dropbtn">Pages 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="index.html">Landing Page</a>
+                <a href="projects.html">Projects Page</a>
+                <a href="hobbies.html">Hobbies Page</a>
+                <a href="gallery.html">Gallery Page</a>
+
+              </div>
+            </div> 
+          </div>
         <h1><b><i>Fletcher Wilson: My Resume</i></b></h1>
         <hr>
         <p><b>Contact Me: </b>fletcherbwilson1@gmail.com | 512-819-1928 | 3804 Baltimore Street 78707, Austin, TX</p>
@@ -40,6 +119,8 @@
                     <li><b>Travel Club Baseball (2018-2023)</b></li>
                     <li><b>Chess Club (2022-2023)</b></li>
                     <li><b>Rocketry Club Ambassador (2023)</b></li>
+                    <li><b>Photoshop & Digital Design (2023-Present)</b></li>
+                    <li><b>Python/Software Development (2022-Present)</b></li>
                 </ul>
             <li>Awards & Achievements:</li>
                 <ul>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  
+  <link href = "style.css" rel = "stylesheet" type= "text/css">
   <title>projects</title>
   
   <style>
@@ -11,16 +11,19 @@
       padding: 20px;
       grid-template-columns: repeat(2,1fr);
       background-color: black;
+      border: outset rgb(165, 90, 20) 7px;
+      border-radius: 15px;
     }
     
     .div1 {
 
-      width: 900px;
-      height: 500px;
+      
+      height: auto;
       border: outset rgb(165, 90, 20) 7px;
       border-radius: 15px;
       margin: 10px;
       background: radial-gradient(ellipse at top, #031f41, rgb(103, 147, 197)), radial-gradient(ellipse at bottom, #0c2969, rgb(76, 122, 182));
+      overflow: hidden;
     }
     h2 {
       color: white;
@@ -34,29 +37,46 @@
       width: 700px;
       height:300px
     }
+   
     p {
       color: white;
       margin-bottom: 8px;
       text-align: center;
     }
+   
     a { 
       background-color: white;
       color: blue;
       border: 2px outset black;
       border-radius: 4px;
     }
+    
+
 
   </style>
 
 </head>
 
 
-  <body>
-    <h1 style="text-align: center; font-family: Impact;">Project Gallery</h1>
+  <body style="background: radial-gradient(ellipse at top, #031f41, rgb(103, 147, 197)), radial-gradient(ellipse at bottom, #0c2969, rgb(76, 122, 182));">
+    <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">Pages 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html">Landing Page</a>
+          <a href="resume.html">Resume Page</a>
+          <a href="hobbies.html">Hobbies Page</a>
+          <a href="gallery.html">Gallery Page</a>
+        </div>
+      </div> 
+    </div>
+    <h1 style="text-align: center; font-family: Impact; color: white;">Project Gallery</h1>
     <div class="divs">
       <div class="div1">
         <h2> Kanye Game</h2>
-        <p><iframe src="videogame.mp4"></iframe></p>
+        <p><iframe src="videogame.mp4" alt="kanye game video"></iframe></p>
         <p>In this game, <span style="font-weight: bold;"> player controls Kanye with the arrow keys, with the goal of capturing enough of the flying gold coins</span> to win, while avoiding the electric death blocks. It was made with pygame, and all kanye west assests were seized from google images, while the death block textures were created originally with AI. </p>
         <a href="kanye game.exe">Executable</a>
         <a href="https://github.com/fwilson12/simple-pygame.git" text-align: right>View on Github</a>
@@ -64,7 +84,7 @@
       
       <div class="div1">
         <h2> agar.io</h2>
-        <p><iframe src="agario.mp4"></iframe></p>
+        <p><iframe src="agario.mp4" alt="agario video demo"></iframe></p>
         <p>In this game, the player controls a blob with their mouse, trying to collect the food pellets across the grid in order to grow and eat the other players before they eat you. It was made in pygame.</p>
         <a href="agario.exe">Executable</a>
         <a href="https://github.com/Austin-High-AP-CS-Principles/agario-fwilson12.git" text-align: right>View on Github</a>
@@ -72,7 +92,7 @@
       
       <div class="div1">
         <h2>Shooting Gallery</h2>
-        <p><iframe src="Shooting Gallery.mp4"></iframe></p>
+        <p><iframe src="Shooting Gallery.mp4" alt="shooting gallery demo"></iframe></p>
         <p>In this game, two players each control one turtle object in a shooting gallery. Each player can turn and shoot projectiles at 3 rows of blocks that require three shots to dissapear. The goal is to clear all blocks. Made in python with turtle. </p>
         <a href="shooting_gallery.exe">Executable</a>
         <a href="https://replit.com/@CSI-Third/88-Creating-Classes-FletcherWilson1" text-align: right>View on Github</a>
@@ -80,7 +100,7 @@
 
       <div class="div1">
         <h2>Zombie Survival</h2>
-        <p><iframe src="Zombie Survival.mp4"></iframe></p>
+        <p><iframe src="Zombie Survival.mp4" alt='zombie game demo'></iframe></p>
         <p>In this game, also made using the turtle libary in python, two players who are constantly moving in the playing area must maneuver around, or eliminate, zombies and capture the golden orb. The players can shoot bullets or drop a nuke to eliminate the zombie turtles, and when they capture the golden orb, more zombies spawn.  </p>
         <a href="zombs.exe">Executable</a>
         <a href="https://replit.com/@CSI-Third/Zombies-CSI-Third-4" text-align: right>View on Github</a> 

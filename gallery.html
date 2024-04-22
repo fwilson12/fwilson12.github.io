@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href = "style.css" rel = "stylesheet" type= "text/css">
+    <title>Photo Gallery</title>
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            max-width: 100%;
+            max-height: 400px;
+            border: outset rgb(165, 90, 20) 7px;
+            border-radius: 15px;
+            margin: 10px;
+            background: radial-gradient(ellipse at top, #031f41, rgb(103, 147, 197)), radial-gradient(ellipse at bottom, #0c2969, rgb(76, 122, 182));
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 {
+      color: rgb(255, 166, 0);
+      margin-bottom: 8px;
+      text-align: center;
+        }
+
+
+    </style>
+</head>
+<body style="background: radial-gradient(ellipse at top, #031f41, rgb(103, 147, 197)), radial-gradient(ellipse at bottom, #0c2969, rgb(76, 122, 182));;">
+    
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Pages 
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="index.html">Landing Page</a>
+            <a href="resume.html">Resume Page</a>
+            <a href="hobbies.html">Hobbies Page</a>
+            <a href="projects.html">Projects Page</a>
+            </div>
+        </div> 
+    </div>
+  
+    <h1> Houston Astros Photo Gallery: Jose Altuve</h1>
+
+
+    <div class="gallery">
+        <button class="btn" id="prevBtn">Previous</button>
+        <img id="image" src="first_image.jpg" alt="Image">
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        const images = ['jose-altuve-.jpg', "download.jpg", "current.jpg", 'swag.jpg']; // 
+        let currentIndex = 0;
+
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const image = document.getElementById("image");
+
+        function showImage(index) {
+            image.src = images[index];
+        }
+
+        prevBtn.addEventListener("click", function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+
+        showImage(currentIndex);
+    </script>
+</body>
+
+</html>
